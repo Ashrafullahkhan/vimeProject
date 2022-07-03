@@ -1,0 +1,35 @@
+<div>
+  <div class="heading">
+    <h1>Select video to Preview</h1>
+    <input type="file" (change)="onChange($event)" />
+  </div>
+  <div style="width: 700px; margin-left: 30%">
+    <vm-player controls *ngIf="format === 'video' && url">
+      <vm-video [poster]="url">
+        <source [src]="url" type="video/mp4" />
+        <track
+          default
+          kind="subtitles"
+          src="/media/subs/en.vtt"
+          srclang="en"
+          label="English"
+        />
+        <track
+          kind="captions"
+          src="/media/caps/fr.vtt"
+          srclang="fr"
+          label="French"
+        />
+      </vm-video>
+      <!-- ... -->
+    </vm-player>
+  </div>
+
+  <button
+    class="btn btn-success"
+    *ngIf="format === 'video' && url"
+    (click)="submit()"
+  >
+    Upload
+  </button>
+</div>

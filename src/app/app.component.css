@@ -1,7 +1,4 @@
 div {
   text-align: center;
-  height: 140px;
-  width: 140px;
-  overflow: hidden;
-  background-color: black;
+  align-items: center;
 }

@@ -1,0 +1,12 @@
+div {
+  text-align: center;
+
+  width: auto;
+}
+button {
+  width: 200px;
+  margin-top: 20px;
+}
+.heading {
+  margin: 20px;
+}
